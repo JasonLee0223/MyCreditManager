@@ -8,7 +8,6 @@
 import Foundation
 
 protocol SystemMenu {
-    func menuStart()
     func addToStudent()
     func deleteToStudent()
     func addOrChangeToGrade()
