@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B05E991292F7514008C1AB2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05E990292F7514008C1AB2 /* main.swift */; };
 		5B05E999293211DD008C1AB2 /* SystemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05E998293211DD008C1AB2 /* SystemMenu.swift */; };
+		5B05E99C29321B2F008C1AB2 /* ExecuteMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05E99B29321B2F008C1AB2 /* ExecuteMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		5B05E98D292F7514008C1AB2 /* MyCreditManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCreditManager; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B05E990292F7514008C1AB2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5B05E998293211DD008C1AB2 /* SystemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenu.swift; sourceTree = "<group>"; };
+		5B05E99B29321B2F008C1AB2 /* ExecuteMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		5B05E98F292F7514008C1AB2 /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
+				5B05E99A29321B04008C1AB2 /* Logic */,
 				5B05E997293211CD008C1AB2 /* Protocol */,
 				5B05E990292F7514008C1AB2 /* main.swift */,
 			);
@@ -71,6 +74,14 @@
 				5B05E998293211DD008C1AB2 /* SystemMenu.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5B05E99A29321B04008C1AB2 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5B05E99B29321B2F008C1AB2 /* ExecuteMenu.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B05E99C29321B2F008C1AB2 /* ExecuteMenu.swift in Sources */,
 				5B05E991292F7514008C1AB2 /* main.swift in Sources */,
 				5B05E999293211DD008C1AB2 /* SystemMenu.swift in Sources */,
 			);
