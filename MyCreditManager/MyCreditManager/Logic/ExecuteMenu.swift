@@ -33,11 +33,25 @@ class ExecuteMenu: SystemMenu {
     }
     
     func deleteToStudent() {
-        // Expecting
+        print("삭제할 학생의 이름을 입력해주세요")
+        let inputName = readLine()!
+        
+        if (inputName != " " && inputName != "\n") || nameArray.isEmpty == false {
+            repeat {
+                let deleteStudent = nameArray.filter{ $0 == inputName}
+                guard let takeOffArray = deleteStudent.first else {
+                    print("\(inputName) 학생을 찾지못했습니다.")
+                    return
+                }
+                print("\(takeOffArray) 학생을 삭제하였습니다.")
+            } while nameArray.count == 0
+        }
     }
     
     func addOrChangeToGrade() {
-        // Expecting
+        print("성적을 추가할 학생의 이름, 과목 이름, 성적(A+, A, F 등)을 띄어쓰기로 구분하여 차례로 작성해주세요.")
+        print("입력예) Mickey Swift A+")
+        print("만약에 학생의 성적 중 해당 과목이 존재하면 기존 점수가 갱신됩니다.")
     }
     
     func deleteGrade() {
