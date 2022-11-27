@@ -9,9 +9,12 @@ import Foundation
 
 class ExecuteMenu: SystemMenu {
     private var nameArray = Array<String>()
+    private var gradeArray = Array<String>()
     
-    init(nameArray: Array<String> = Array<String>()) {
+    init(nameArray: Array<String> = Array<String>(),
+         gradeArray: Array<String> = Array<String>()) {
         self.nameArray = nameArray
+        self.gradeArray = gradeArray
     }
     
     func addToStudent() {
@@ -49,9 +52,36 @@ class ExecuteMenu: SystemMenu {
     }
     
     func addOrChangeToGrade() {
+        let checkGradeBoard = ["A+", "A", "B+", "B", "C+", "C", "D+", "D", "F"]
+        
         print("성적을 추가할 학생의 이름, 과목 이름, 성적(A+, A, F 등)을 띄어쓰기로 구분하여 차례로 작성해주세요.")
         print("입력예) Mickey Swift A+")
         print("만약에 학생의 성적 중 해당 과목이 존재하면 기존 점수가 갱신됩니다.")
+        
+        let inputGrade = readLine()!.components(separatedBy: " ")
+        let checkInputCount = inputGrade.count >= 1 || inputGrade.count < 3 ? true : false
+        
+        if checkInputCount == true {
+            inputGrade.forEach{
+                switch $0 {
+                case inputGrade[0] :
+                    break
+                case inputGrade[1] :
+                    break
+                case inputGrade[2] :
+                    break
+                default :
+                    break
+                }
+            }
+        } else {
+            print("입력(갯수)이(가) 잘못되었습니다. 다시 확인해주세요.")
+        }
+        
+        if inputGrade.first == nil || inputGrade.count < 3 {
+            let popGrade = checkGradeBoard.filter{ $0 != inputGrade[2] }
+            //            let isRightGrade:Bool = checkGradeBoard.filter{ $0 != inputGrade[2] } ? true : false
+        }
     }
     
     func deleteGrade() {
