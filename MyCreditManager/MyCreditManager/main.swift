@@ -29,8 +29,8 @@ class MyCreditManager {
                 executeMenu.deleteToStudent()
                 break
             case "3":
+                executeMenu.addOrChangeToGrade()
                 break
-                
             case "4":
                 break
                 
