@@ -82,7 +82,7 @@ class ExecuteMenu: SystemMenu {
                     let popGrade = checkGradeBoard.filter{ $0 == inputGrade[2] }.joined()
                     if  popGrade == inputGrade[2] {
                         gradeArray.append(inputGrade[2])
-                        print("\(gradeArray)입력 내용을 저장합니다.👍🏻 ")
+                        print("\(gradeArray[0]) 학생의 \(gradeArray[1]) 과목이 \(gradeArray[2])로 추가(변경)되었습니다.")
                     } else {
                         print("입력(성적)이 잘못되었습니다. 다시 확인해주세요.")
                         return
@@ -99,7 +99,32 @@ class ExecuteMenu: SystemMenu {
     }
     
     func deleteGrade() {
-        // Expecting
+        print("성적을 삭제할 학생의 이름, 과목 이름을 띄어쓰기로 구분하여 차례로 작성해주세요.")
+        print("입력예) Mickey Swift")
+        
+        let inputDeleteValue = readLine()!.components(separatedBy: " ")
+        let checkInputCount = inputDeleteValue.count >= 1 || inputDeleteValue.count < 2 ? true : false
+        
+        if checkInputCount == true {
+            switch inputDeleteValue.count {
+            case 1:
+                if inputDeleteValue[0] != gradeArray[0] {
+                    print("입력(학생이름)이 잘못되었습니다. 다시 확인해주세요.")
+                    return
+                }
+            case 2:
+                if inputDeleteValue[0] == gradeArray[0] && inputDeleteValue[1] == gradeArray[1] {
+                    gradeArray.removeAll()
+                    print("\(inputDeleteValue[0]) 학생의 \(inputDeleteValue[1]) 과목의 성적이 삭제되었습니다.")
+                    break
+                } else {
+                    print("\(inputDeleteValue[0]) 학생을 찾지 못했습니다.")
+                    break
+                }
+            default:
+                print("입력이 잘못되었습니다. 다시 확인해주세요.")
+            }
+        }
     }
     
     func viewOfAverage() {
