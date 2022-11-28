@@ -65,22 +65,36 @@ class ExecuteMenu: SystemMenu {
             inputGrade.forEach{
                 switch $0 {
                 case inputGrade[0] :
-                    break
+                    if inputGrade[0] == nameArray[0] {
+                        gradeArray.append(inputGrade[0])
+                    } else {
+                        print("입력(학생의 이름)이 잘못되었습니다. 다시 확인해주세요.")
+                        return
+                    }
                 case inputGrade[1] :
-                    break
+                    if inputGrade[1] == "Swift" {
+                        gradeArray.append(inputGrade[1])
+                    } else {
+                        print("입력(과목)이 잘못되었습니다. 다시 확인해주세요.")
+                        return
+                    }
                 case inputGrade[2] :
+                    let popGrade = checkGradeBoard.filter{ $0 == inputGrade[2] }.joined()
+                    if  popGrade == inputGrade[2] {
+                        gradeArray.append(inputGrade[2])
+                        print("\(gradeArray)입력 내용을 저장합니다.👍🏻 ")
+                    } else {
+                        print("입력(성적)이 잘못되었습니다. 다시 확인해주세요.")
+                        return
+                    }
                     break
                 default :
+                    print("입력이 잘못되었습니다. 다시 확인해주세요.")
                     break
                 }
             }
         } else {
             print("입력(갯수)이(가) 잘못되었습니다. 다시 확인해주세요.")
-        }
-        
-        if inputGrade.first == nil || inputGrade.count < 3 {
-            let popGrade = checkGradeBoard.filter{ $0 != inputGrade[2] }
-            //            let isRightGrade:Bool = checkGradeBoard.filter{ $0 != inputGrade[2] } ? true : false
         }
     }
     
