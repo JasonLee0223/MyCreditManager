@@ -32,8 +32,8 @@ class MyCreditManager {
                 executeMenu.addOrChangeToGrade()
                 break
             case "4":
+                executeMenu.deleteGrade()
                 break
-                
             case "5":
                 break
                 
