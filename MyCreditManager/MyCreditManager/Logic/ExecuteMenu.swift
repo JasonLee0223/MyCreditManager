@@ -131,7 +131,13 @@ class ExecuteMenu: SystemMenu {
         // Expecting
     }
     
-    func exitMenu() {
-        // Expecting
+    func exitMenu(input value: String?) {
+        guard let inputValue = value else {
+            return
+        }
+        if inputValue == "X" {
+            print("프로그램을 종료합니다...")
+            exit(0)
+        }
     }
 }
