@@ -13,5 +13,5 @@ protocol SystemMenu {
     func addOrChangeToGrade()
     func deleteGrade()
     func viewOfAverage()
-    func exitMenu()
+    func exitMenu(input value: String?)
 }
